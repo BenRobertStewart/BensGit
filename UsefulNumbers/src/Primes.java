@@ -13,14 +13,14 @@ public class Primes {
 			return isPrime;
 		}
 		
-		if (theNumber % 2 == 0) {
+		if (theNumber % 2 == 0 && theNumber != 2) {
 			isPrime = false;
 			return isPrime;
 		}
 		
 		if (theNumber > 1) {
-			for (int i = 2; i < Math.sqrt(theNumber) + 1; i++) {
-				for (int j = 2; j  < Math.sqrt(theNumber) + 1; j++) {
+			for (int i = 2; i < theNumber; i++) {
+				for (int j = 2; j  < theNumber + 1; j++) {
 					int result = i*j;
 					if (result == theNumber) {
 						isPrime = false;
@@ -31,8 +31,8 @@ public class Primes {
 		}
 		
 		if (theNumber < -1) {
-			for (int i = -2; i > Math.sqrt(theNumber) - 1; i--) {
-				for (int j = -2; j  > Math.sqrt(theNumber) - 1; j--) {
+			for (int i = -2; i > theNumber + 1; i--) {
+				for (int j = -2; j  > theNumber+1; j--) {
 					int result = i*-j;
 					if (result == theNumber) {
 						isPrime = false;

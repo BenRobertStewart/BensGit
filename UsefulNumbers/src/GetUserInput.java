@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class GetUserInput {
@@ -8,7 +9,7 @@ public class GetUserInput {
 
 	public void printOptions() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Would you like to:\n1. Check Prime Status\n2. Find GCD\n3. Find Inverse");
+		System.out.println("Would you like to:\n1. Check Prime Status\n2. Find GCD\n3. Find Inverse\n4. Generate Primes up to number n");
 		int option = sc.nextInt();
 		if (option == 1) {
 			final Primes p = new Primes();
@@ -46,6 +47,17 @@ public class GetUserInput {
 			ic.findCoefficient(num1, num2);
 			System.out.print("The Inverse Function is: " + ic.getFirstCoefficient() + "(" + num1 + ")" + " + "
 					+ ic.getSecondCoefficient() + "(" + num2 + ") = " + f.gcd(num1, num2));
+		}
+		
+		if (option == 4) {
+			final GeneratePrimes gp = new GeneratePrimes();
+			System.out.print("Enter number n that you would like to generate primes up to: ");
+			int n  = sc.nextInt();
+			gp.primeList(n);
+			String s = gp.getArrays();
+			gp.arraysShortener(s);
+			String j = gp.getArrays();
+			System.out.println(j);
 		}
 	}
 }
