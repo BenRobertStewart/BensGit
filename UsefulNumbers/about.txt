@@ -1,0 +1,1 @@
+In this program you can check if a number is prime, find the gcd, or show an inverse function given 2 numbers!
