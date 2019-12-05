@@ -9,7 +9,7 @@ public class GetUserInput {
 
     public void printOptions() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Would you like to:\n1. Check Prime Status\n2. Find GCD\n3. Find Inverse\n4. Generate Primes up to number n");
+        System.out.println("Would you like to:\n1. Check Prime Status\n2. Find GCD\n3. Find Inverse\n4. Generate Primes up to number n\n5. Convert Decimal to Binary\n6. Convert Binary to Decimal");
         int option = sc.nextInt();
         if (option == 1) {
             final Primes p = new Primes();
@@ -63,6 +63,22 @@ public class GetUserInput {
             gp.arraysShortener(s);
             String j = gp.getArrays();
 //			System.out.println(j);
+        }
+        
+        if (option == 5) {
+        	final DecimalToBinary db = new DecimalToBinary();
+        	System.out.print("Enter number to get binary of: ");
+        	int n = sc.nextInt();
+        	String binary = db.getBinaryOf(n);
+        	System.out.println(binary);
+        }
+        
+        if (option == 6) {
+        	final BinaryToDecimal bd = new BinaryToDecimal();
+        	System.out.print("Enter the binary number to get decimal value of: ");
+        	String s = sc.next();
+        	double decimalValue = bd.getDecimalOf(s);
+        	System.out.println(decimalValue);
         }
 
     }
