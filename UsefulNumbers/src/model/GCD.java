@@ -13,7 +13,7 @@ public class GCD {
 		int c = a;
 		int d = b;
 		 int n = min(c,d);
-	        for(int i = 2; i < n; i++)
+	        for(int i = 2; i <= n; i++)
 	        {
 	            while(c % i == 0 && d % i==0)
 	            {
