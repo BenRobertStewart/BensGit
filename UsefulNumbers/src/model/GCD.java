@@ -1,3 +1,4 @@
+package model;
 import static java.lang.StrictMath.min;
 
 public class GCD {
