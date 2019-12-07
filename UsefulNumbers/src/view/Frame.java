@@ -112,6 +112,11 @@ public class Frame {
 		frame.getContentPane().add(btnFindGcd);
 
 		btnFindInverseFunction = new JButton("Find Inverse Function");
+		btnFindInverseFunction.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameInverseFunction.main(null);
+			}
+		});
 		buttonGroup.add(btnFindInverseFunction);
 		btnFindInverseFunction.setForeground(Color.BLACK);
 		btnFindInverseFunction.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 15));
