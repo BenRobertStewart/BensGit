@@ -132,7 +132,12 @@ public class Frame {
 		btnGeneratePrimeList.setBounds(10, 263, 191, 71);
 		frame.getContentPane().add(btnGeneratePrimeList);
 
-		btnConvertBooleanTo = new JButton("Convert Boolean to Decimal");
+		btnConvertBooleanTo = new JButton("Convert Binary to Decimal");
+		btnConvertBooleanTo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameBinaryToDecimal.main(null);
+			}
+		});
 		buttonGroup.add(btnConvertBooleanTo);
 		btnConvertBooleanTo.setForeground(Color.BLACK);
 		btnConvertBooleanTo.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
@@ -140,7 +145,12 @@ public class Frame {
 		btnConvertBooleanTo.setBounds(10, 347, 191, 71);
 		frame.getContentPane().add(btnConvertBooleanTo);
 
-		btnConvertDecimalTo = new JButton("Convert Decimal to Boolean");
+		btnConvertDecimalTo = new JButton("Convert Decimal to Binary");
+		btnConvertDecimalTo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrameDecimalToBinary.main(null);
+			}
+		});
 		buttonGroup.add(btnConvertDecimalTo);
 		btnConvertDecimalTo.setForeground(Color.BLACK);
 		btnConvertDecimalTo.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
